@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .box{
+            padding: 0;
+            margin: 0;
+            display: none;
+        }
+    
+        .red{
+            background-color: red;
+        }
+    
+        .blue{
+            background-color: blue;
+        }
+    
+        .green{
+            background-color: green;
+        }
+    </style>
+    <div>
+        <label><input type="radio" name="choose" value="red">Đỏ</label>
+        <label><input type="radio" name="choose" value="blue">Xanh nước biển</label>
+        <label><input type="radio" name="choose" value="green">Xanh lá cây</label>
+    </div>
+    <div>
+        <div class="red box">Đỏ</div>
+        <div class="blue box">Xanh nước biển</div>
+        <div class="green box">Xanh lá cây</div>
+    </div>
+    <script src="https://code.jquery.com/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('input[type="radio"]').click(function(){
+                if($(this).attr("value")=="red"){
+                    $(".box").hide();
+                    $(".red").show();
+                }
+                if($(this).attr("value")=="green"){
+                    $(".box").hide();
+                    $(".green").show();
+                }
+                if($(this).attr("value")=="blue"){
+                    $(".box").hide();
+                    $(".blue").show();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
